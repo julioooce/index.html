@@ -1,0 +1,101 @@
+<html></html>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia dos Namorados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz Dia dos Namorados meu amor ❤️</h1>
+    <form id="senhaForm">
+        <label for="senha">Digite o nome do seu amor para acessar:</label>
+        <input type="password" id="senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <div id="conteudo" style="display: none;">
+        <h2>No Dia dos Namorados, tudo que eu quero é lembrar quanto você é especial para mim. Cada momento ao seu lado é uma bênção, e o amor que compartilhamos é a luz mais brilhante que ilumina meu caminho. Feliz Dia dos Namorados, meu amor! ❤️</h2>
+        <div id="heart">❤️</div>
+        <p>Que este dia seja repleto de amor e felicidade ❤️ </p>
+        <p>Aqui está uma música especial para você: <a href="https://www.youtube.com/watch?v=qGLARe3KgMA" target="_blank">Zé Neto e Cristiano - Te Amo</a></p>
+    </div>
+
+    <script>
+        document.getElementById("senhaForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+            var senhaInserida = document.getElementById("senha").value;
+            // Verifica se a senha inserida está correta
+            if (senhaInserida === "julio") {
+                // Mostra o conteúdo principal se a senha estiver correta
+                document.getElementById("conteudo").style.display = "block";
+                // Oculta o formulário de senha
+                document.getElementById("senhaForm").style.display = "none";
+            } else {
+                alert("Senha incorreta. Tente novamente.");
+            }
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia dos Namorados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f5f5f5;
+            position: relative;
+        }
+        .heart {
+            color: red;
+            font-size: 200px;
+            position: absolute;
+            animation: pulse 1s infinite alternate;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
+        .heart1 {
+            top: -50px;
+            left: 20%;
+        }
+        .heart2 {
+            top: -50px;
+            left: 50%;
+        }
+        .heart3 {
+            top: -50px;
+            right: 20%;
+        }
+    </style>
+</head>
+<body>
+     <div class="heart heart1">❤️</div>
+    <div class="heart heart2">❤️</div>
+    <div class="heart heart3">❤️</div>
+
+   </html>
